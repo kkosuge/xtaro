@@ -25,7 +25,7 @@ export const meta: MetaFunction = (context) => {
       "twitter:site": "@9m",
     },
     {
-      "og:url": `${baseURL}?t=${encodeURIComponent(t)}`,
+      "og:url": `${baseURL}/?t=${encodeURIComponent(t)}`,
     },
     {
       "og:title": "大きな文字でXにポストしてみませんか",
@@ -80,7 +80,7 @@ export default function Index() {
     );
   });
 
-  const intentUrl = `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent("X太郎")}&text=${encodeURI(`${baseURL}?t=${encodeURIComponent(text)}`)}`;
+  const intentUrl = `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent("X太郎")}&text=${encodeURI(`${baseURL}/?t=${encodeURIComponent(text)}`)}`;
 
   return (
     <div className="font-sans pt-16 pb-0 h-screen">
