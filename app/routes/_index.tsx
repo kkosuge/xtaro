@@ -18,6 +18,18 @@ export const meta: MetaFunction = (context) => {
     {
       "og:image": `${baseURL}/ogp?t=${encodeURIComponent(t)}`,
     },
+    {
+      "twitter:card": "summary_large_image",
+    },
+    {
+      "twitter:site": "@9m",
+    },
+    {
+      "og:url": `${baseURL}?t=${encodeURIComponent(t)}`,
+    },
+    {
+      "og:title": "大きな文字でXにポストしてみませんか",
+    },
   ];
 };
 
