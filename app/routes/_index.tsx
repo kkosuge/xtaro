@@ -17,23 +17,23 @@ export const meta: MetaFunction = (context) => {
     { name: "description", content: "大きな文字でXにポストしてみませんか" },
     {
       name: "og:image",
-      contetn: `${baseURL}/ogp?t=${encodeURIComponent(t)}`,
+      content: `${baseURL}/ogp?t=${encodeURIComponent(t)}`,
     },
     {
       name: "twitter:card",
-      contetn: "summary_large_image",
+      content: "summary_large_image",
     },
     {
       name: "twitter:site",
-      contetn: "@9m",
+      content: "@9m",
     },
     {
       name: "og:url",
-      contetn: `${baseURL}/?t=${encodeURIComponent(t)}`,
+      content: `${baseURL}/?t=${encodeURIComponent(t)}`,
     },
     {
       name: "og:title",
-      contetn: "大きな文字でXにポストしてみませんか",
+      content: "大きな文字でXにポストしてみませんか",
     },
   ];
 };
