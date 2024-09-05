@@ -16,7 +16,8 @@
     "@remix-run/serve": "^2.11.2",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-textarea-autosize": "^8.5.3"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.11.2",
