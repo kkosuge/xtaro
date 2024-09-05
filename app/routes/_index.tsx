@@ -89,9 +89,9 @@ export default function Index() {
   const imageUrl = `${baseURL}/ogp?t=${encodeURIComponent(text)}`;
 
   return (
-    <div className="font-sans pt-16 pb-0 h-screen">
+    <div className="font-sans pt-16 pb-0 h-full">
       <div className="flex flex-col gap-4 h-full">
-        <div className="flex flex-col gap-4 border rounded p-4 max-w-[426px] mx-auto">
+        <div className="flex flex-col gap-4 border rounded p-4 max-w-[426px] mx-auto shadow">
           <div className="flex gap-2">
             <img
               src="/icon.webp"
@@ -109,7 +109,7 @@ export default function Index() {
             </div>
           </div>
           <div
-            className="border rounded p-8 relative font-semibold"
+            className="border rounded p-8 relative font-semibold select-none"
             style={{
               width: `${cardWidth}px`,
               height: `${cardHeight}px`,
@@ -133,17 +133,20 @@ export default function Index() {
             href={intentUrl}
             target="_blank"
             rel="noreferrer"
-            className="bg-black text-white font-bold text-xl w-full block rounded text-center py-2 hover:bg-gray-800 max-w-[394px] mx-auto"
+            className="bg-black text-white font-bold border border-black text-xl w-full block rounded text-center py-2 hover:bg-gray-800 max-w-[394px] mx-auto"
           >
             𝕏 にポストする
           </a>
         </div>
 
-        <TextareaAutosize
-          className="w-full h-[100px] border rounded px-6 py-4  resize-none bg-gray-100 text-xl text-gray-600 max-w-[394px] mx-auto"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
+        <div className="flex flex-col max-w-[394px] mx-auto  bg-gray-200 rounded p-4 pt-2 w-full gap-1 border border-gray-200">
+          <div className="w-full text-gray-800 text-xs">文面を編集する</div>
+          <TextareaAutosize
+            className="w-full h-[100px] border rounded px-6 py-4 resize-none text-xl text-gray-600 w-full border-gray-100"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
 
         <a
           href="https://x.com/9m"
