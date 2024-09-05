@@ -86,6 +86,7 @@ export default function Index() {
   });
 
   const intentUrl = `https://twitter.com/intent/tweet?hashtags=${encodeURIComponent("X太郎")}&text=${encodeURI(`${baseURL}/?t=${encodeURIComponent(text)}`)}`;
+  const imageUrl = `${baseURL}/ogp?t=${encodeURIComponent(text)}`;
 
   return (
     <div className="font-sans pt-16 pb-0 h-screen">
@@ -119,14 +120,24 @@ export default function Index() {
           </div>
         </div>
 
-        <a
-          href={intentUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="bg-black text-white font-bold text-xl w-full block rounded text-center py-2 hover:bg-gray-800 max-w-[394px] mx-auto"
-        >
-          𝕏 にポストする
-        </a>
+        <div className="flex flex-col gap-2">
+          <a
+            href={imageUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="bg-white text-black border border-black font-bold text-xl w-full block rounded text-center py-2 hover:opacity-80 max-w-[394px] mx-auto"
+          >
+            画像を保存する
+          </a>
+          <a
+            href={intentUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="bg-black text-white font-bold text-xl w-full block rounded text-center py-2 hover:bg-gray-800 max-w-[394px] mx-auto"
+          >
+            𝕏 にポストする
+          </a>
+        </div>
 
         <TextareaAutosize
           className="w-full h-[100px] border rounded px-6 py-4  resize-none bg-gray-100 text-xl text-gray-600 max-w-[394px] mx-auto"
