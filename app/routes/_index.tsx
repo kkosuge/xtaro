@@ -16,19 +16,24 @@ export const meta: MetaFunction = (context) => {
     { title: "大きな文字でXにポストしてみませんか" },
     { name: "description", content: "大きな文字でXにポストしてみませんか" },
     {
-      "og:image": `${baseURL}/ogp?t=${encodeURIComponent(t)}`,
+      name: "og:image",
+      contetn: `${baseURL}/ogp?t=${encodeURIComponent(t)}`,
     },
     {
-      "twitter:card": "summary_large_image",
+      name: "twitter:card",
+      contetn: "summary_large_image",
     },
     {
-      "twitter:site": "@9m",
+      name: "twitter:site",
+      contetn: "@9m",
     },
     {
-      "og:url": `${baseURL}/?t=${encodeURIComponent(t)}`,
+      name: "og:url",
+      contetn: `${baseURL}/?t=${encodeURIComponent(t)}`,
     },
     {
-      "og:title": "大きな文字でXにポストしてみませんか",
+      name: "og:title",
+      contetn: "大きな文字でXにポストしてみませんか",
     },
   ];
 };
