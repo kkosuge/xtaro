@@ -109,7 +109,7 @@ export default function Index() {
             </div>
           </div>
           <div
-            className="border rounded p-8 relative font-semibold select-none"
+            className="border rounded p-8 relative font-bold select-none"
             style={{
               width: `${cardWidth}px`,
               height: `${cardHeight}px`,
